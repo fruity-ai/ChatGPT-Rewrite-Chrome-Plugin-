@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Website Text Extractor</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Rewrite with GPT</h1>
+      <img src="fruity-ai.svg" alt="Logo" class="logo">
+    </header>
+    <h3 id="resultHeading">Marked text:</h3>
+    <div id="result"></div>
+    <div id="buttons">
+      <select id="languageDropdown">
+        <option value="English">English</option>
+        <option value="Danish">Danish</option>
+      </select>
+      <button id="extractBtn">Rewrite text</button>
+    </div>
+    <div id="loading">
+      <div class="loader"></div>
+      <img src="fruity-ai.svg"  class="spin">
+      <p class="spinText">Fruity-AI</p>
+
+    </div>
+    <div id="output" style="display: none;">
+      <h3 id="outputHeading">Rewritten text:</h3>
+      <div id="outputText"></div>
+      <button id="copyBtn">Copy to clipboard</button>
+    </div>
+
+  </body>
+</html>

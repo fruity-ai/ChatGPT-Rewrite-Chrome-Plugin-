@@ -1,0 +1,247 @@
+h3 {
+  font-family: 'Karla', sans-serif;
+  font-size: 15px;
+}
+
+
+#resultHeading {
+  margin-left: 10px;
+  margin-bottom: 3px;
+}
+
+#result {
+  width: auto;
+  height: auto;
+  /*border: 1px solid #A4A4A4;*/
+  border-radius: 10px;
+  padding: 10px;
+  font-family: 'Karla', sans-serif;
+  font-size: 12px;
+  color: #A4A4A4;
+  overflow: auto;
+}
+
+button#extractBtn, button#copyBtn {
+  background-color: #F6EEE5;
+  border: 1px solid #e2e2e2;
+  border-radius: 0px;
+  color: black;
+  cursor: pointer;
+  font-family: "Karla", sans-serif;
+  font-weight: bold;
+  font-size: 13px;
+  letter-spacing: 1px;
+  margin: 10px;
+  padding: 10px;
+  transition: all 0.3s ease;
+  /*float: right;*/
+  margin-right: 0px;
+  height: 40px;
+}
+
+button#extractBtn:hover, button#copyBtn:hover {
+  background-color: black;
+  color: #F6EEE5;
+}
+
+select#languageDropdown {
+  background-color: #F6EEE5;
+  border: 1px solid #e2e2e2;
+  border-radius: 0px;
+  color: black;
+  font-family: Karla, sans-serif;
+  font-weight: bold;
+  font-size: 13px;
+  letter-spacing: 1px;
+  margin: 10px;
+  padding: 10px;
+  transition: all 0.3s ease;
+  float: left;
+  margin-right: 10px;
+  margin-left: 10px;
+  height: 40px;
+}
+
+select#languageDropdown:hover {
+  background-color: black;
+  color: #F6EEE5;
+  cursor: pointer;
+}
+
+body {
+  background-color: white; /* Replace with your desired color */
+  width: 500px;
+  margin: 0px;
+}
+
+#outputText {
+  width: 450px;
+  height: auto;
+  /*border: 1px solid #A4A4A4;*/
+  border-radius: 10px;
+  padding: 10px;
+  padding-top: 0px;
+  font-family: 'Karla', sans-serif;
+  font-size: 15px;
+  color: black;
+  overflow: auto;
+}
+
+#outputHeading {
+  width: 450px;
+  height: auto;
+  /*border: 1px solid #A4A4A4;*/
+  color: black;
+  margin-left: 10px;
+}
+
+#buttons {
+    height: 60px;
+}
+
+
+
+  #loading {
+    box-sizing: content-box;
+    margin: 0 auto 10px auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+
+
+    .spin {
+      -webkit-animation: spin 2.25s linear infinite;
+      animation: spin 2.25s linear infinite;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      width: 30px;
+      transform: translate(-50%, -50%);
+
+    }
+
+    .spinText {
+      -webkit-animation: spin 2.25s linear infinite;
+      animation: spin 2.25s linear infinite;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      width: 30px;
+      transform: translate(-50%, -50%);
+      width: 50px;
+      top: 60%;
+      font-family: 'Karla', sans-serif;
+
+    }
+
+    .bounce {
+      -webkit-animation: bounce 2.25s linear infinite;
+      animation: bounce 2.25s linear infinite;
+      height: 100%;
+      margin: 0 auto;
+      position: relative;
+      width: 100%;
+
+      &:after,
+      &:before {
+        box-sizing: content-box;
+        content: '';
+        height: 10px;
+        position: absolute;
+        top: 13px;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        width: 10px;
+      }
+
+      &:before {
+        border-bottom: 3px solid black;
+        border-left: 3px solid black;
+        left: 0;
+      }
+
+      &:after {
+        border-right: 3px solid black;
+        border-top: 3px solid black;
+        right: 0;
+      }
+    }
+  }
+}
+
+#output {
+    display: none;
+}
+
+header {
+  width: auto;
+  background-color: #F6EEE5;
+  color: Black;
+  padding: 10px;
+  text-align: left;
+  font-family: 'Karla', sans-serif;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  font-size: 20px;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+}
+
+.logo {
+  width: auto;
+  height: 30px;
+  align-self: center;
+  margin-right: 10px;
+}
+
+@keyframes rotation {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+
+  .loader {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border: 5px solid rgba(0, 0, 0, 0.2);
+    border-top-color: #000;
+    border-radius: 50%;
+    animation: rotation 1s linear infinite;
+    left: 50%;
+    position: absolute;
+    top: 55%;
+    transform: translate(-50%, -50%);
+  }
+
+.text-only {
+    display: inline;
+    background-color: transparent;
+    border: none;
+    cursor: default;
+    font-family: "Karla", sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin: 10px;
+    padding: 10px;
+    margin-left: 0px
+  }
