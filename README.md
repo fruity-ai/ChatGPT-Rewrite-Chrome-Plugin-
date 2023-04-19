@@ -1,0 +1,1 @@
+# ChatGPT-Rewrite-Chrome-Plugin-
