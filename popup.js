@@ -25,9 +25,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     function combineTextWithLanguage(text, language) {
-        allText = `I am going to send you som text from a website. I need you to rewrite the text in ${language}.
-        I want you only to return the rewritten text. Nothing before and nothing after.
-        The text: ${text}`
+        allText = `I will provide you with text inside parentheses. Rephrase the text in ${language}.
+        I want you only to return the rewritten text. Nothing before and nothing after. The response cannot be represented in parentheses either.
+        The text: (${text})`
 
         console.log(allText);
 
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
  async function makeAPICall(data) {
-  const response = await fetch('https://gpt-summarizer-5oxqvewo.ew.gateway.dev/summary/?key=AIzaSyCp9PHmf7cs5VKvwRRhlXpBWgOaIt3SprU', {
+  const response = await fetch('https://gpt-summarizer-5oxqvewo.ew.gateway.dev/summary/?key==--API-KEY-GOES-HERE--', {
     method: 'POST',
     headers: {
       'Authorization': "bearer $(gcloud auth print-identity-token)",
